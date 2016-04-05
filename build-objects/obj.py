@@ -118,3 +118,27 @@ def traingleRoofHouse(x,y,z):
         mc.setBlocks(x-5-a,y+10,z-5-a,x+5+a,y+10,z+5+a,89)
         a-=1
         y+=1
+
+# Car which moves permanently and Stieve inside
+
+def car(x,y,z):
+    while True:
+        mc.setBlocks(x+2,y-1,z-20,x+9,y-1,z+20,35,15)
+         #красная шерсть — корпус машины 35.14
+         #x — расстоние до тачки и её ширина
+         #y — высота
+         #z — длина
+        mc.setBlocks(x+5,y+1,z,x+7,y+2,z+7,35,14)
+         #стекло
+        mc.setBlocks(x+5,y+3,z+2,x+7,y+4,z+5,20)
+
+         #колеса — из черной шерсти 35,15
+        mc.setBlocks(x+4,y,z+1,x+5,y+1,z+2,35,15)
+        mc.setBlocks(x+4,y,z+5,x+5,y+1,z+6,35,15)
+        mc.setBlocks(x+7,y,z+1,x+8,y+1,z+2,35,15)
+        mc.setBlocks(x+7,y,z+5,x+8,y+1,z+6,35,15)
+        #Стив внутри
+        mc.player.setTilePos(x+6,y+3,z+4)
+        z = z - 1
+        time.sleep(0.5)
+        mc.setBlocks(x,y,z,x+10,y+10,z+10,0)
