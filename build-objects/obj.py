@@ -142,3 +142,25 @@ def car(x,y,z):
         z = z - 1
         time.sleep(0.5)
         mc.setBlocks(x,y,z,x+10,y+10,z+10,0)
+
+# house with road, grass and tree
+
+def houseWithRoad(x,y,z):
+        #газон
+    mc.setBlocks(x-10,y-1,z-10,x+10,y-1,z+10,2)
+    #построим коробку
+    mc.setBlocks(x-5,y-1,z-5,x+4,y+9,z+4,5)
+    mc.setBlocks(x-4,y,z-4,x+3,y+8,z+3,0)
+    #построим окна и вход
+    mc.setBlocks(x-4,y+6,z+4,x-2,y+7,z+4,20)
+    mc.setBlocks(x-4,y+3,z+4,x-2,y+4,z+4,20)
+    mc.setBlocks(x+1,y+6,z+4,x+3,y+7,z+4,20)
+    mc.setBlocks(x+1,y,z+4,x+2,y+2,z+4,0)
+    #тротуар и дорога
+    mc.setBlocks(x-10,y,z+6,x+10,y,z+9,44)
+    mc.setBlocks(x-10,y-1,z+10,x+10,y-1,z+16,35,15)
+    mc.setBlocks(x-10,y,z+17,x+10,y,z+19,44)
+    #дерево
+    mc.setBlocks(x+6,y+2,z-1,x+8,y+5,z+1,18)
+    mc.setBlocks(x+7,y-1,z,x+7,y+4,z,5,1)
+
