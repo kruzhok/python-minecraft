@@ -3,6 +3,8 @@
 
 from mcpi.minecraft import Minecraft
 mc = Minecraft.create()
+import time
+import random
 
 # butterfly
 
@@ -164,3 +166,14 @@ def houseWithRoad(x,y,z):
     mc.setBlocks(x+6,y+2,z-1,x+8,y+5,z+1,18)
     mc.setBlocks(x+7,y-1,z,x+7,y+4,z,5,1)
 
+def musicPlayer(x,y,z):
+    while True:
+        time.sleep(0.2)
+        mc.setBlocks(x+5,y,z-3,x+5,y+5,z+3,0)
+        mc.setBlocks(x+5,y,z-3,x+5,y+random.randint(0,5),z-3,35,1)
+        mc.setBlocks(x+5,y,z-2,x+5,y+random.randint(0,5),z-2,35,2)
+        mc.setBlocks(x+5,y,z-1,x+5,y+random.randint(0,5),z-1,35,3)
+        mc.setBlocks(x+5,y,z,x+5,y+random.randint(0,5),z,35,4)
+        mc.setBlocks(x+5,y,z+1,x+5,y+random.randint(0,5),z+1,35,5)
+        mc.setBlocks(x+5,y,z+2,x+5,y+random.randint(0,5),z+2,35,6)
+        mc.setBlocks(x+5,y,z+3,x+5,x+random.randint(0,5),z+3,35,7)
