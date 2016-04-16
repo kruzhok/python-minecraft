@@ -177,3 +177,50 @@ def musicPlayer(x,y,z):
         mc.setBlocks(x+5,y,z+1,x+5,y+random.randint(0,5),z+1,35,5)
         mc.setBlocks(x+5,y,z+2,x+5,y+random.randint(0,5),z+2,35,6)
         mc.setBlocks(x+5,y,z+3,x+5,x+random.randint(0,5),z+3,35,7)
+
+def Image(ImageName,X0,Y0,Z0):
+    from PIL import Image
+    import math
+    mc = Minecraft.create()
+    white = [221,221,221,0]#rgb, id
+    orange = [219,125,62,1]#rgb, id
+    magneta = [179,80,188,2]#rgb, id
+    lightBlue = [107,138,201,3]#rgb, id
+    yellow = [177,166,39,4]#rgb, id
+    lime = [65,174,56,5]#rgb, id
+    pink = [208,132,153,6]#rgb, id
+    gray = [64,64,64,7]#rgb, id
+    lightGray = [154,161,161,8]#rgb, id
+    cyan = [46,110,137,9]#rgb, id
+    purple = [126,61,181,10]#rgb, id
+    blue = [46,56,141,11]#rgb, id
+    brown = [79,50,31,12]#rgb, id
+    green = [53,70,27,13]#rgb, id
+    red = [150,52,48,14]#rgb, id
+    black = [25,22,22,15]#rgb, id
+    colors = [white,orange,magneta,lightBlue,yellow,lime,pink,gray,lightGray,cyan,purple,blue,brown,green,red,black]
+    #enter your data here:
+    img = Image.open(ImageName)#image
+    #place
+    if img.width*img.height > 500*500:
+        mc.postToChat("the Image is too big!")
+    else:
+        data = img.load()
+        x = 0
+        while x < img.width:
+            y = 0
+            while y < img.height:
+                res = 255*3
+                pixel = data[x,y]
+                for color in colors:
+                    r = pixel[0]-color[0]
+                    g = pixel[1]-color[1]
+                    b = pixel[2]-color[2]
+                    if math.fabs(r)+math.fabs(g)+math.fabs(b) < res:
+                        res = math.fabs(r)+math.fabs(g)+math.fabs(b)
+                        block = 35,color[3]
+                mc.setBlock(X0+x,Y0,Z0+y,block)
+                y = y + 1
+            mc.postToChat(str(int(x / img.width * 100))+"%")
+            x = x + 1
+        mc.postToChat("done.")
