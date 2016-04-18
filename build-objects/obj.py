@@ -177,3 +177,38 @@ def musicPlayer(x,y,z):
         mc.setBlocks(x+5,y,z+1,x+5,y+random.randint(0,5),z+1,35,5)
         mc.setBlocks(x+5,y,z+2,x+5,y+random.randint(0,5),z+2,35,6)
         mc.setBlocks(x+5,y,z+3,x+5,x+random.randint(0,5),z+3,35,7)
+
+# Airplane which moves 190 steps forvard and up. After it disappears
+def airplane(x,y,z):
+    while y<=190:
+       x=x+1
+       y=y+1
+       #корпус
+       mc.setBlocks(x+2,y,z-2,x+14,y+4,z+2, 35,14)
+       #кабина
+       mc.setBlocks(x+10,y+1,z-2,x+14,y+4,z+2,20)
+       #воздух
+       mc.setBlocks(x+11,y+2,z-1,x+13,y+3,z+1,0)
+       #нос
+       mc.setBlocks(x+15,y+1,z-1,x+15,y+3,z+1,20)
+       mc.setBlock(x+16,y+2,z,20)
+       #крылья
+       a=8
+       b=3
+       while a>=3:
+           mc.setBlocks(x+3,y+1,z+b,x+a,y+1,z+b,35)
+           mc.setBlocks(x+3,y+1,z-b,x+a,y+1,z-b,35)
+           a=a-1
+           b=b+1
+       c=6
+       d=5
+       while c>=3:
+           mc.setBlocks(x+3,y+d,z,x+c,y+d,z,35)
+           c-=1
+           d+=1
+       #турбины
+           mc.setBlocks(x+1,y+1,z-2,x+1,y+3,z-2,138)
+           mc.setBlocks(x+1,y+1,z+2,x+1,y+3,z+2,138)
+       t.sleep(0.4)
+       #kill
+       mc.setBlocks(x+1,y,z-8,x+16,y+8,z+8,0)
