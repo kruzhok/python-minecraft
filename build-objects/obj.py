@@ -212,3 +212,43 @@ def airplane(x,y,z):
        t.sleep(0.4)
        #kill
        mc.setBlocks(x+1,y,z-8,x+16,y+8,z+8,0)
+# Add rocket
+def setRocket(x,y,z):
+    #определяю переменные материалов
+    corpus = 152
+    window = 20
+    gold = 41
+    zakrilki = 89
+    #обод из прутьев
+    mc.setBlocks(x+5,y+10,z-3,x+11,y+10,z+3,101)
+    #строю корпус
+    mc.setBlocks(x+6,y+4,z-2,x+10,y+19,z+2,corpus)
+    #строю кабину
+    mc.setBlocks(x+7,y+12,z-1,x+9,y+18,z+1,0)
+    #строю окна
+    mc.setBlocks(x+7,y+12,z-2,x+9,y+14,z-2,window)
+    mc.setBlocks(x+7,y+16,z-2,x+9,y+18,z-2,window)
+    mc.setBlocks(x+7,y+12,z+2,x+9,y+14,z+2,window)
+    mc.setBlocks(x+7,y+16,z+2,x+9,y+18,z+2,window)
+    #шпиль
+    mc.setBlocks(x+7,y+20,z-1,x+9,y+20,z+1,gold)
+    mc.setBlock(x+8,y+21,z,139,0)
+    mc.setBlocks(x+8,y+22,z,x+8,y+23,z,101)
+    #дверь
+    mc.setBlocks(x+6,y+12,z,x+6,y+13,z,0)
+    mc.setBlock(x+6,y+13,z,96)
+    #закрылки
+    mc.setBlocks(x+3,y,z,x+3,y+3,z,zakrilki)
+    mc.setBlocks(x+4,y+2,z,x+4,y+5,z,zakrilki)
+    mc.setBlocks(x+5,y+4,z,x+5,y+7,z,zakrilki)
+    mc.setBlocks(x+11,y+4,z,x+11,y+7,z,zakrilki)
+    mc.setBlocks(x+12,y+2,z,x+12,y+5,z,zakrilki)
+    mc.setBlocks(x+13,y,z,x+13,y+3,z,zakrilki)
+    mc.setBlocks(x+8,y,z-5,x+8,y+3,z-5,zakrilki)
+    mc.setBlocks(x+8,y+2,z-4,x+8,y+5,z-4,zakrilki)
+    mc.setBlocks(x+8,y+4,z-3,x+8,y+7,z-3,zakrilki)
+    mc.setBlocks(x+8,y,z+5,x+8,y+3,z+5,zakrilki)
+    mc.setBlocks(x+8,y+2,z+4,x+8,y+5,z+4,zakrilki)
+    mc.setBlocks(x+8,y+4,z+3,x+8,y+7,z+3,zakrilki)
+    #огонь
+    mc.setBlocks(x+7,y+3,z-1,x+9,y+3,z+1,10)
