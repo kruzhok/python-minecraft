@@ -1,8 +1,7 @@
 # python-minecraft-lib
 Library of Python functions for Minecraft which is made during Moscow Coding School Course
-█▀▄▀█░▀█▀░█▀▄░█▀░█▀░█▀▀█░█▀█░█▀░▀█▀
-█░▀░█░░█░░█░█░█▀░█░░█▄▄▀░█▄█░█▀░░█░
-▀░░░▀░▀▀▀░▀░▀░▀▀░▀▀░▀░▀▀░▀░▀░▀░░░▀░
+
+<br> <br>
 This is the repository of Minecraft Course in Moscow Coding School
 www: http://moscoding.ru/minecraft/
 
