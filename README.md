@@ -2,10 +2,10 @@
 Library of Python functions for Minecraft which is made during Moscow Coding School Course
 
 <br> <br>
-This is the repository of Minecraft Course in Moscow Coding School
+This is the repository of Minecraft Course in Moscow Coding School <br>
 www: http://moscoding.ru/minecraft/
 
-To launch this code you need to download:
+To launch this code you need to download: <br>
 
 MacOS:<br>
 Minecraft - https://launcher.mojang.com/download/Minecraft.dmg <br>
