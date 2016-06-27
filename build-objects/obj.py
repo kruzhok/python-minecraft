@@ -532,3 +532,806 @@ def setShip4(x,y,z):
    mc.setBlock(x+8,y+10,z+11,169)
    mc.setBlock(x+15,y+11,z+11,85)
    mc.setBlock(x+15,y+10,z+11,169)
+
+#soccer court
+def setPitch(x,y,z):
+    a=0
+    c=35
+    d=2
+    b=41
+    fieldArray=[
+            [
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [b,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,b],
+                [b,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,b],
+                [b,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,b],
+                [b,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,b],
+                [b,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,b],
+                [b,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,b],
+                [b,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,b],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            ],
+            [
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [b,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,b],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [b,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,b],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            ],
+            [
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [b,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,b],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [b,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,b],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+                [a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            ],
+            [
+                [c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c],
+                [c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c],
+                [c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c],
+                [c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c],
+                [c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c],
+                [c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c],
+                [c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c],
+                [c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c],
+                [c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c],
+                [c,c,c,c,c,c,c,c,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,c,c,c,c,c,c,c,c],
+                [c,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,c,c,c,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,c],
+                [c,d,d,d,d,d,d,d,c,c,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,c,d,d,d,d,d,c,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,c,c,d,d,d,d,d,d,d,c],
+                [c,c,c,d,d,d,d,d,c,d,c,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,c,d,d,d,d,d,d,d,c,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,c,d,c,d,d,d,d,c,c,c,c],
+                [c,d,c,d,d,d,d,d,c,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,c,d,d,c,d,d,d,d,c,d,d,c],
+                [c,d,c,d,d,d,d,d,c,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,c,d,d,d,d,c,d,d,c],
+                [c,d,c,d,d,d,d,d,c,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,c,d,d,d,d,c,d,d,c],
+                [c,d,c,d,d,d,c,d,c,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,c,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,c,d,c,d,d,c,d,d,c],
+                [c,d,c,d,d,d,d,d,c,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,c,d,d,d,d,c,d,d,c],
+                [c,d,c,d,d,d,d,d,c,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,c,d,d,d,d,c,d,d,c],
+                [c,d,c,d,d,d,d,d,c,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,c,d,c,d,d,d,d,c,d,d,c],
+                [c,c,c,d,d,d,d,d,c,d,c,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,c,d,d,d,d,d,d,d,c,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,c,c,d,d,d,d,c,c,c,c],
+                [c,d,d,d,d,d,d,d,c,c,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,c,d,d,d,d,d,c,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,c],
+                [c,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,c,c,c,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,c],
+                [c,c,c,c,c,c,c,c,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,c,c,c,c,c,c,c,c],
+                [c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c],
+                [c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c],
+                [c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c],
+                [c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c],
+                [c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c],
+                [c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c],
+                [c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c],
+                [c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,c],
+                [c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c],
+            ]
+        ]
+    while True: 
+        for pattern in fieldArray:
+            y=pos.y
+            z=pos.z
+            x=pos.x
+            for level in pattern:
+                z=pos.z
+                for block in level:
+                    mc.setBlock(x+3, y+3, z-3, block)
+                    z+=1
+                x+=1
+            y-=1
+        break
+
+#treasure house
+def setSkyscraper(x,y,z):
+    a = 0
+    b = (95,15)
+    c = 42
+    d = 89
+    e = (159,7)
+    f = 41
+    g = 57
+    h = (1,6)
+    bigArray = [                                 
+                    [
+                         [c,c,c,c,c,c,c],
+                         [d,d,d,d,d,d,d],
+                         [c,b,b,b,b,b,c],
+                         [c,b,b,b,b,b,c],
+                         [c,b,b,b,b,b,c],
+                         [c,c,c,c,c,c,c],
+                         [c,b,b,b,b,b,c],
+                         [c,b,b,b,b,b,c],
+                         [c,b,b,b,b,b,c],
+                         [c,c,c,c,c,c,c],
+                         [c,b,b,b,b,b,c],
+                         [c,b,b,b,b,b,c],
+                         [c,b,b,b,b,b,c],
+                         [c,c,c,c,c,c,c],
+                         [c,b,b,b,b,b,c],
+                         [c,b,b,b,b,b,c],
+                         [c,b,b,b,b,b,c],
+                         [c,c,c,c,c,c,c],
+                         [c,b,b,b,b,b,c],
+                         [c,b,b,b,b,b,c],
+                         [c,b,b,b,b,b,c],
+                         [c,c,c,c,c,c,c],
+                         [c,b,b,b,b,b,c],
+                         [c,b,b,b,b,b,c],
+                         [c,b,b,b,b,b,c],
+                         [c,c,c,c,c,c,c],
+                         [e,a,e,a,e,a,e],
+                         [e,a,e,a,e,a,e],
+                         [e,a,e,a,e,a,e],
+                         [e,a,e,a,e,a,e],
+                         [h,h,h,h,h,h,h]
+                    ],
+                    [
+                         [c,c,c,c,c,c,c],
+                         [d,d,d,d,d,d,d],
+                         [b,a,a,a,a,a,b],
+                         [b,a,a,a,a,a,b],
+                         [c,a,a,a,a,a,b],
+                         [c,c,c,c,c,c,c],
+                         [b,a,a,a,a,a,b],
+                         [b,a,a,a,a,a,b],
+                         [b,a,a,a,a,a,b],
+                         [c,c,c,c,c,c,c],
+                         [b,a,a,a,a,a,b],
+                         [b,a,a,a,a,a,b],
+                         [b,a,a,a,a,a,b],
+                         [c,c,c,c,c,c,c],
+                         [b,a,a,a,a,a,b],
+                         [b,a,a,a,a,a,b],
+                         [b,a,a,a,a,a,b],
+                         [b,c,c,c,c,c,c],
+                         [b,a,a,a,a,a,b],
+                         [b,a,a,a,a,a,b],
+                         [b,a,a,a,a,a,b],
+                         [c,c,c,c,c,c,c],
+                         [b,a,a,a,a,a,b],
+                         [b,a,a,a,a,a,b],
+                         [b,a,a,a,a,a,b],
+                         [c,c,c,c,c,c,c],
+                         [a,e,a,e,a,e,a],
+                         [a,e,a,e,a,e,a],
+                         [a,e,a,e,a,e,a],
+                         [a,e,a,e,a,e,a],
+                         [h,h,h,h,h,h,h]
+                    ],
+                    [
+                         
+                         [c,c,c,c,c,c,c],
+                         [d,d,d,d,d,d,d],
+                         [b,a,g,g,g,a,b],
+                         [b,a,g,g,g,a,b],
+                         [c,a,g,g,g,a,b],
+                         [c,c,c,c,c,c,c],
+                         [b,a,f,f,f,a,b],
+                         [b,a,f,f,f,a,b],
+                         [b,a,f,f,f,a,b],
+                         [c,c,c,c,c,c,c],
+                         [b,a,g,g,g,a,b],
+                         [b,a,g,g,g,a,b],
+                         [b,a,g,g,g,a,b],
+                         [c,c,c,c,c,c,c],
+                         [b,a,f,f,f,a,b],
+                         [b,a,f,f,f,a,b],
+                         [b,a,f,f,f,a,b],
+                         [b,c,c,c,c,c,c],
+                         [b,a,g,g,g,a,b],
+                         [b,a,g,g,g,a,b],
+                         [b,a,g,g,g,a,b],
+                         [c,c,c,c,c,c,c],
+                         [b,a,f,f,f,a,b],
+                         [b,a,f,f,f,a,b],
+                         [b,a,f,f,f,a,b],
+                         [c,c,c,c,c,c,c],
+                         [e,a,e,a,e,a,e],
+                         [e,a,e,a,e,a,e],
+                         [e,a,e,a,e,a,e],
+                         [e,a,e,a,e,a,e],
+                         [h,h,h,h,h,h,h]
+                    ],
+                    [
+                         [c,c,c,c,c,c,c],
+                         [d,d,d,d,d,d,d],
+                         [b,a,g,g,g,a,b],
+                         [b,a,g,g,g,a,b],
+                         [c,a,g,g,g,a,b],
+                         [c,c,c,c,c,c,c],
+                         [b,a,f,f,f,a,b],
+                         [b,a,f,f,f,a,b],
+                         [b,a,f,f,f,a,b],
+                         [c,c,c,c,c,c,c],
+                         [b,a,g,g,g,a,b],
+                         [b,a,g,g,g,a,b],
+                         [b,a,g,g,g,a,b],
+                         [c,c,c,c,c,c,c],
+                         [b,a,f,f,f,a,b],
+                         [b,a,f,f,f,a,b],
+                         [b,a,f,f,f,a,b],
+                         [b,c,c,c,c,c,c],
+                         [b,a,g,g,g,a,b],
+                         [b,a,g,g,g,a,b],
+                         [b,a,g,g,g,a,b],
+                         [c,c,c,c,c,c,c],
+                         [b,a,f,f,f,a,b],
+                         [b,a,f,f,f,a,b],
+                         [b,a,f,f,f,a,b],
+                         [c,c,c,c,c,c,c],
+                         [a,e,a,e,a,e,a],
+                         [a,e,a,e,a,e,a],
+                         [a,e,a,e,a,e,a],
+                         [a,e,a,e,a,e,a],
+                         [h,h,h,h,h,h,h]
+                    ],
+                    [
+                         [c,c,c,c,c,c,c],
+                         [d,d,d,d,d,d,d],
+                         [b,a,g,g,g,a,b],
+                         [b,a,g,g,g,a,b],
+                         [c,a,g,g,g,a,b],
+                         [c,c,c,c,c,c,c],
+                         [b,a,f,f,f,a,b],
+                         [b,a,f,f,f,a,b],
+                         [b,a,f,f,f,a,b],
+                         [c,c,c,c,c,c,c],
+                         [b,a,g,g,g,a,b],
+                         [b,a,g,g,g,a,b],
+                         [b,a,g,g,g,a,b],
+                         [c,c,c,c,c,c,c],
+                         [b,a,f,f,f,a,b],
+                         [b,a,f,f,f,a,b],
+                         [b,a,f,f,f,a,b],
+                         [b,c,c,c,c,c,c],
+                         [b,a,g,g,g,a,b],
+                         [b,a,g,g,g,a,b],
+                         [b,a,g,g,g,a,b],
+                         [c,c,c,c,c,c,c],
+                         [b,a,f,f,f,a,b],
+                         [b,a,f,f,f,a,b],
+                         [b,a,f,f,f,a,b],
+                         [c,c,c,c,c,c,c],
+                         [e,a,e,a,e,a,e],
+                         [e,a,e,a,e,a,e],
+                         [e,a,e,a,e,a,e],
+                         [e,a,e,a,e,a,e],
+                         [h,h,h,h,h,h,h]
+                    ],
+                    [
+                         
+                         [c,c,c,c,c,c,c],
+                         [d,d,d,d,d,d,d],
+                         [b,a,a,a,a,a,b],
+                         [b,a,a,a,a,a,b],
+                         [c,a,a,a,a,a,b],
+                         [c,c,c,c,c,c,c],
+                         [b,a,a,a,a,a,b],
+                         [b,a,a,a,a,a,b],
+                         [b,a,a,a,a,a,b],
+                         [c,c,c,c,c,c,c],
+                         [b,a,a,a,a,a,b],
+                         [b,a,a,a,a,a,b],
+                         [b,a,a,a,a,a,b],
+                         [c,c,c,c,c,c,c],
+                         [b,a,a,a,a,a,b],
+                         [b,a,a,a,a,a,b],
+                         [b,a,a,a,a,a,b],
+                         [b,c,c,c,c,c,c],
+                         [b,a,a,a,a,a,b],
+                         [b,a,a,a,a,a,b],
+                         [b,a,a,a,a,a,b],
+                         [c,c,c,c,c,c,c],
+                         [b,a,a,a,a,a,b],
+                         [b,a,a,a,a,a,b],
+                         [b,a,a,a,a,a,b],
+                         [c,c,c,c,c,c,c],
+                         [a,e,a,e,a,e,a],
+                         [a,e,a,e,a,e,a],
+                         [a,e,a,e,a,e,a],
+                         [a,e,a,e,a,e,a],
+                         [h,h,h,h,h,h,h]
+                    ],
+                    [
+                         [c,c,c,c,c,c,c],
+                         [d,d,d,d,d,d,d],
+                         [c,b,b,b,b,b,c],
+                         [c,b,b,b,b,b,c],
+                         [c,b,b,b,b,b,c],
+                         [c,c,c,c,c,c,c],
+                         [c,b,b,b,b,b,c],
+                         [c,b,b,b,b,b,c],
+                         [c,b,b,b,b,b,c],
+                         [c,c,c,c,c,c,c],
+                         [c,b,b,b,b,b,c],
+                         [c,b,b,b,b,b,c],
+                         [c,b,b,b,b,b,c],
+                         [c,c,c,c,c,c,c],
+                         [c,b,b,b,b,b,c],
+                         [c,b,b,b,b,b,c],
+                         [c,b,b,b,b,b,c],
+                         [c,c,c,c,c,c,c],
+                         [c,b,b,b,b,b,c],
+                         [c,b,b,b,b,b,c],
+                         [c,b,b,b,b,b,c],
+                         [c,c,c,c,c,c,c],
+                         [c,b,b,b,b,b,c],
+                         [c,b,b,b,b,b,c],
+                         [c,b,b,b,b,b,c],
+                         [c,c,c,c,c,c,c],
+                         [e,a,e,a,e,a,e],
+                         [e,a,e,a,e,a,e],
+                         [e,a,e,a,e,a,e],
+                         [e,a,e,a,e,a,e],
+                         [h,h,h,h,h,h,h]
+                    ]
+        ]
+    for letter in bigArray:
+       y=pos.y
+       z=pos.z
+       x+=1
+       for level in letter:
+           z=pos.z
+           for block in level:
+               mc.setBlock(x+3, y+5, z-3, block)
+               z+=1
+           y-=1
+
+#the beautiful picture
+def setPicture(x,y,z):
+  a = 0
+  w = 2
+  q = (159,4)
+  r = 89
+  d = 1
+  c = (17,1)
+  s = (18,1)
+  e = 8
+  bigArray = [
+                 [
+                      [q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,s,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,s,a,a,a,a,a,a,a,a,a,a,s,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,s,a,a,q],
+                      [q,a,s,a,a,a,a,a,a,a,a,a,a,s,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,q],
+                      [q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q],
+           
+                  ],
+[
+                      [q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,s,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,s,c,s,a,a,a,a,a,a,a,a,s,a,a,a,a,a,a,q],
+                      [q,a,c,a,a,a,a,a,a,a,a,a,a,s,a,s,a,a,a,q],
+                      [q,s,c,s,s,a,a,a,a,a,a,a,s,c,s,a,s,a,a,q],
+                      [q,a,c,a,a,a,a,a,a,a,a,a,a,c,a,s,c,s,a,q],
+                      [q,s,c,s,s,s,a,a,a,a,a,s,s,c,s,s,c,s,s,q],
+                      [q,a,c,a,a,a,a,a,a,a,a,a,a,c,a,a,c,a,a,q],
+                      [q,w,c,w,w,w,e,e,e,e,e,e,w,c,s,s,c,s,s,q],
+                      [q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q],
+           
+                  ], 
+                  [
+                      [r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,s,a,a,a,a,a,a,q],
+                      [q,a,s,a,a,a,a,a,a,a,a,s,c,s,a,s,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,c,a,a,c,a,a,a,q],
+                      [q,a,s,a,a,a,a,a,a,a,s,s,c,s,s,c,s,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,s,s,s,c,s,s,c,a,a,a,q],
+                      [q,a,s,a,a,a,a,a,a,a,a,a,c,s,s,c,s,s,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,c,a,a,c,a,a,a,q],
+                      [q,w,w,w,w,w,e,e,e,e,e,e,w,w,w,w,w,w,w,q],
+                      [q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q],
+                 ], 
+[
+                      [q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,d,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,d,d,d,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,d,d,d,d,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,d,d,d,d,d,d,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,d,d,d,d,d,d,d,d,a,a,a,a,a,a,a,a,q],
+                      [q,a,d,d,d,d,d,d,d,d,d,d,a,a,a,a,a,a,a,q],
+                      [q,w,w,w,w,w,e,e,e,e,e,e,w,w,w,w,w,w,w,q],
+                      [q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q],
+                  ],
+                  [
+                      [q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,d,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,d,d,d,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,d,d,d,d,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,d,d,d,d,d,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,d,d,d,d,d,d,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,d,d,d,d,d,d,d,d,d,a,a,a,a,a,a,q],
+                      [q,a,a,d,d,d,d,d,d,d,d,d,d,a,a,a,a,a,a,q],
+                      [q,a,d,d,d,d,d,d,d,d,d,d,d,d,a,a,a,a,a,q],
+                      [q,a,d,d,d,d,d,d,d,d,d,d,d,d,a,a,a,a,a,q],
+                      [q,d,d,d,d,d,d,d,d,d,d,d,d,d,d,a,a,a,a,q],
+                      [q,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,q],
+                      [q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q],
+                  ],
+                  [
+                      [q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,d,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,d,d,d,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,d,d,d,d,d,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,d,d,d,d,d,d,d,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,d,d,d,d,d,d,d,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,d,d,d,d,d,d,d,d,q],
+                      [q,a,a,a,a,a,a,a,a,a,d,d,d,d,d,d,d,d,d,q],
+                      [q,a,a,a,a,a,a,a,d,d,d,d,d,d,d,d,d,d,d,q],
+                      [q,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,q],
+                      [q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q],
+                 ],
+[
+                      [q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,d,a,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,a,d,d,d,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,a,d,d,d,d,a,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,a,d,d,d,d,d,d,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,a,d,d,d,d,d,d,d,a,q],
+                      [q,a,a,a,a,a,a,a,a,a,d,d,d,d,d,d,d,d,d,q],
+                      [q,a,a,a,a,a,a,a,a,a,d,d,d,d,d,d,d,d,d,q],
+                      [q,a,a,a,a,a,a,a,a,d,d,d,d,d,d,d,d,d,d,q],
+                      [q,a,a,a,a,a,a,a,d,d,d,d,d,d,d,d,d,d,d,q],
+                      [q,a,a,a,a,a,a,d,d,d,d,d,d,d,d,d,d,d,d,q],
+                      [q,a,a,a,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,q],
+                      [q,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,q],
+                      [q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q],
+           
+                ]
+      ]
+  for letter in bigArray:
+      y=pos.y
+      z=pos.z
+      x+=1
+      for level in letter:
+          z=pos.z
+          for block in level:
+              mc.setBlock(x+3, y+5, z-3, block)
+              z+=1
+          y-=1
+
+#trololo face
+def trololo(tx,ty,tz):
+    a=1
+    c=(1,6)
+    b=155
+    f=0
+    k=5
+    bigArray = [
+                  [
+               [f,f,f,f,f,f,f,f,f,f,f,c,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+               [f,f,f,f,f,f,f,f,f,c,a,a,a,a,a,c,c,c,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,a,a],
+               [f,f,f,f,f,f,f,c,a,a,c,b,b,b,b,b,b,b,c,c,c,c,b,b,b,b,b,b,c,c,c,b,b,b,b,b,a,a],
+               [f,f,f,f,f,c,a,a,b,b,b,b,b,b,c,c,b,b,b,b,b,b,b,b,b,c,c,c,c,c,c,c,c,b,b,b,b,a,c],
+               [f,f,f,f,f,c,a,b,b,b,b,c,c,b,b,b,c,b,b,b,b,b,c,c,b,b,b,b,b,b,c,c,c,c,b,b,b,c,a],
+               [f,f,f,f,c,a,c,b,b,b,c,b,b,b,b,b,c,b,b,b,b,b,c,b,b,b,b,b,b,b,b,b,c,b,b,b,b,b,a,c],
+               [f,f,f,f,c,a,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,c,a,a,a,a,c,b,b,b,b,b,b,b,b,c,a],
+               [f,f,f,c,a,a,b,b,b,b,b,a,a,a,a,c,b,b,b,b,b,b,c,a,a,b,a,a,a,a,a,c,b,b,b,b,b,b,b,a,a],
+               [f,f,c,a,a,b,c,b,c,b,a,a,a,a,a,a,a,b,c,b,b,b,a,b,b,c,a,a,a,a,a,a,c,c,c,b,b,b,b,c,a,a],
+               [f,f,c,a,b,c,b,b,b,b,b,b,b,b,c,c,a,a,c,b,b,b,a,a,a,c,b,b,c,b,b,b,b,b,c,a,a,a,c,b,b,c,a],
+               [f,c,a,c,b,b,c,a,a,c,b,b,b,b,b,b,c,c,b,b,b,b,b,c,b,b,b,b,a,a,b,b,c,a,a,c,b,b,a,a,b,b,c,a],
+               [f,c,a,c,b,b,c,c,c,a,a,a,a,b,b,b,a,c,b,b,b,b,b,b,b,b,b,b,b,c,a,a,c,b,b,b,a,b,b,a,c,b,b,a],
+               [f,c,a,c,b,b,b,b,c,b,c,c,b,b,b,a,a,b,b,b,b,b,c,a,c,b,b,b,b,b,b,b,b,b,a,a,a,c,b,b,a,b,b,a],
+               [f,f,c,a,b,c,b,b,a,b,b,b,b,c,a,a,b,b,b,b,b,b,c,c,a,c,b,b,b,b,b,c,a,a,c,b,a,a,a,c,a,b,b,a],
+               [f,f,c,a,c,b,b,a,a,b,b,b,c,c,a,a,b,b,b,b,a,a,a,b,a,b,b,b,c,a,a,a,c,b,b,b,a,b,b,a,b,b,b,a],
+               [f,f,c,a,a,b,b,a,a,a,c,b,b,b,b,b,a,a,c,b,b,b,b,b,c,c,a,a,a,c,b,a,b,b,c,a,a,b,b,b,b,b,a],
+               [f,f,f,c,a,b,b,a,a,c,a,a,a,c,b,b,b,a,b,b,b,c,a,a,a,a,c,b,b,b,b,a,a,a,a,a,b,b,b,b,b,a,a],
+               [f,f,f,c,a,b,b,a,b,c,b,b,a,a,a,a,a,a,a,a,a,c,c,b,b,a,b,b,c,a,a,a,c,b,a,b,b,b,b,b,a,a],
+               [f,f,f,c,a,c,b,a,a,a,b,b,c,b,b,b,a,b,b,b,c,b,b,b,b,a,a,a,a,a,c,a,b,a,a,b,b,b,b,a,a],
+               [f,f,f,c,a,c,b,a,a,a,a,a,a,a,c,a,a,c,c,a,a,c,a,a,a,a,a,c,b,b,b,c,a,a,b,b,b,b,b,a],
+               [f,f,f,c,a,c,b,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,c,b,a,b,b,b,b,a,a,b,b,b,b,b,a,a],
+               [f,f,f,c,a,c,b,a,a,a,a,a,a,a,a,a,a,a,a,c,a,c,b,b,b,b,a,b,b,c,a,a,b,b,b,b,b,b,a],
+               [f,f,f,c,a,b,b,c,a,a,b,a,b,a,b,b,a,b,b,b,c,c,b,b,b,b,c,a,a,a,b,b,b,b,b,b,c,a],
+               [f,f,f,c,a,b,b,b,a,a,c,a,b,c,c,b,c,c,b,b,c,a,b,b,c,a,a,a,c,b,b,b,c,c,b,c,a],
+               [f,f,f,c,a,b,b,b,b,b,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,c,b,b,b,c,c,c,c,c,a,a],
+               [f,f,f,c,a,b,b,b,b,b,b,b,b,b,b,c,c,c,c,c,b,b,b,b,b,b,b,c,c,c,b,c,a,a],
+               [f,f,f,c,a,b,c,b,b,c,c,b,b,b,b,b,b,b,b,b,b,b,b,c,c,c,c,b,b,c,a,a],
+               [f,f,f,c,a,b,b,c,c,b,b,c,b,b,b,b,b,b,b,b,c,c,c,c,b,b,b,c,a,a],
+               [f,f,f,c,a,b,b,b,c,c,c,c,b,b,b,b,b,b,b,b,b,b,b,b,b,c,a,a],
+               [f,f,f,c,a,a,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,c,c,a,a,a],
+               [f,f,f,f,c,a,a,b,b,b,b,b,b,b,b,b,b,c,a,a,a,a,a],
+               [f,f,f,f,f,f,c,a,a,a,a,a,a,a,a,a,a,a],
+           ]
+    ]
+                  
+    for letter in bigArray:
+       ty=pos.y
+       tz=pos.z
+       for level in letter:
+           tz=pos.z
+           for block in level:
+               mc.setBlock(tx+30, ty, tz-25, block)
+               tz+=1
+           ty-=1
+
+# the cannon
+def setCannon(x,y,z):
+    b=(5,5)
+    c=42
+    a=0
+    bigarray=[
+        [
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            [a,a,a,a,a,a,a,b,b,b,a,a,a,a],
+            [a,a,a,a,a,a,a,b,a,b,a,a,a,a],
+            [a,a,a,a,a,a,b,b,a,b,b,a,a,a],
+            [a,a,a,a,a,a,b,a,a,a,b,a,a,a],
+            [a,a,a,a,a,b,b,a,a,a,b,b,a,a],
+            [a,a,a,a,b,b,b,b,b,b,b,b,b,a]
+            
+                
+            ],
+        [
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            [a,a,a,a,a,a,a,b,b,b,a,a,a,a],
+            [a,a,a,a,a,a,a,b,a,b,a,a,a,a],
+            [a,a,a,a,a,a,b,b,a,b,b,a,a,a],
+            [a,a,a,a,a,a,b,a,a,a,b,a,a,a],
+            [a,a,a,a,a,b,b,a,a,a,b,b,a,a],
+            [a,a,a,a,b,b,b,b,b,b,b,b,b,a]
+            
+                
+            ],
+        [
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a]
+            
+                
+            ],
+        [
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [c,a,a,c,c,c,c,a,a,a,c,c,a,a],
+            [c,a,a,c,c,c,c,a,a,a,c,c,a,a],
+            [c,a,a,c,c,c,c,a,a,a,c,c,a,a],
+            [c,a,a,c,c,c,c,a,a,a,c,c,a,a],
+            [c,a,a,c,c,c,c,a,a,a,c,c,a,a],
+            [c,a,a,c,c,c,c,a,a,a,c,c,a,a],
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a]
+            
+                
+            ],
+        [
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [c,a,a,c,c,c,c,a,a,a,c,c,a,a],
+            [a,c,c,a,a,a,a,a,a,a,a,a,c,a],
+            [a,c,c,a,a,a,a,a,a,a,a,a,c,a],
+            [a,c,c,a,a,a,a,a,a,a,a,a,c,a],
+            [a,c,c,a,a,a,a,a,a,a,a,a,c,a],
+            [c,a,a,c,c,c,c,a,a,a,c,c,a,a],
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a]
+            
+                
+            ],
+        [
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [c,a,a,c,c,c,c,a,a,a,c,c,a,a],
+            [a,c,c,a,a,a,a,a,a,a,a,a,c,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,c],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,c],
+            [a,c,c,a,a,a,a,a,a,a,a,a,c,a],
+            [c,a,a,c,c,c,c,a,a,a,c,c,a,a],
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a]
+            
+                
+            ],
+        [
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [c,a,a,c,c,c,c,a,a,a,c,c,a,a],
+            [a,c,c,a,a,a,a,a,a,a,a,a,c,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,c],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,c],
+            [a,c,c,a,a,a,a,a,a,a,a,a,c,a],
+            [c,a,a,c,c,c,c,a,a,a,c,c,a,a],
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a]
+            
+                
+            ],
+        [
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [c,a,a,c,c,c,c,a,a,a,c,c,a,a],
+            [a,c,c,a,a,a,a,a,a,a,a,a,c,a],
+            [a,c,c,a,a,a,a,a,a,a,a,a,c,a],
+            [a,c,c,a,a,a,a,a,a,a,a,a,c,a],
+            [a,c,c,a,a,a,a,a,a,a,a,a,c,a],
+            [c,a,a,c,c,c,c,a,a,a,c,c,a,a],
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a]
+            
+                
+            ],
+        [
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [c,a,a,c,c,c,c,a,a,a,c,c,a,a],
+            [c,a,a,c,c,c,c,a,a,a,c,c,a,a],
+            [c,a,a,c,c,c,c,a,a,a,c,c,a,a],
+            [c,a,a,c,c,c,c,a,a,a,c,c,a,a],
+            [c,a,a,c,c,c,c,a,a,a,c,c,a,a],
+            [c,a,a,c,c,c,c,a,a,a,c,c,a,a],
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a]
+            
+                
+            ],
+        [
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a]
+            
+                
+            ],
+        [
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            [a,a,a,a,a,a,a,b,b,b,a,a,a,a],
+            [a,a,a,a,a,a,a,b,a,b,a,a,a,a],
+            [a,a,a,a,a,a,b,b,a,b,b,a,a,a],
+            [a,a,a,a,a,a,b,a,a,a,b,a,a,a],
+            [a,a,a,a,a,b,b,a,a,a,b,b,a,a],
+            [a,a,a,a,b,b,b,b,b,b,b,b,b,a]
+            
+                
+            ],
+        [
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            [a,a,a,a,a,a,a,b,b,b,a,a,a,a],
+            [a,a,a,a,a,a,a,b,a,b,a,a,a,a],
+            [a,a,a,a,a,a,b,b,a,b,b,a,a,a],
+            [a,a,a,a,a,a,b,a,a,a,b,a,a,a],
+            [a,a,a,a,a,b,b,a,a,a,b,b,a,a],
+            [a,a,a,a,b,b,b,b,b,b,b,b,b,a]
+            
+                
+            ]
+        ]
+    for letter in bigarray:
+        y=pos.y
+        z=pos.z
+        x+=1
+        for level in letter:
+            z=pos.z
+            for block in level:
+                mc.setBlock(x+3,y+8,z-10,block)
+                z+=1
+            y-=1
