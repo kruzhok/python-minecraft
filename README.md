@@ -5,7 +5,7 @@ Library of Python functions for Minecraft which is made during Moscow Coding Sch
 This is the repository of Minecraft Course in Moscow Coding School <br>
 www: http://moscoding.ru/minecraft/
 
-To launch this code you need to download: <br>
+To launch this code you need to download and install: <br>
 
 MacOS:<br>
 Minecraft - https://launcher.mojang.com/download/Minecraft.dmg <br>
