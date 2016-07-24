@@ -1097,7 +1097,7 @@ def setPicture(x,y,z):
           y-=1
 
 #trololo face
-def trololo(tx,ty,tz):
+def trololo(x,y,z):
     a=1
     c=(1,6)
     b=155
@@ -1141,14 +1141,14 @@ def trololo(tx,ty,tz):
     ]
                   
     for letter in bigArray:
-       ty=pos.y
-       tz=pos.z
+       y=pos.y
+       z=pos.z
        for level in letter:
-           tz=pos.z
+           z=pos.z
            for block in level:
-               mc.setBlock(tx+30, ty, tz-25, block)
-               tz+=1
-           ty-=1
+               mc.setBlock(x+30, y, z-25, block)
+               z+=1
+           y-=1
 
 # the cannon
 def setCannon(x,y,z):
