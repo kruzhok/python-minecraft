@@ -2,7 +2,8 @@ from mcpi.minecraft import Minecraft
 mc=Minecraft.create()
 import time
 import random
-
+pos = mc.player.getTilePos()#определяем позицию игрока
+x,y,z = pos.x,pos.y,pos.z
 d = {
     "start":"Pumpkin: AAAHAHAHHHAH, Stevie! I'll kill you, man!!",
     "beat":["Pumpkin: Die!", "Steve: Aw, painful..."],

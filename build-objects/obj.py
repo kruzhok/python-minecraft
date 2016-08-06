@@ -1149,7 +1149,6 @@ def trololo(x,y,z):
                mc.setBlock(x+30, y, z-25, block)
                z+=1
            y-=1
-
 # the cannon
 def setCannon(x,y,z):
     b=(5,5)
