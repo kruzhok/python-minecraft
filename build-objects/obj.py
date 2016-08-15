@@ -9,7 +9,7 @@ import random
 # butterfly
 
 def butterfly(x,y,z):
-    
+
     #body
     mc.setBlocks(x+5,y+5,z,x+8,y+5,z+1,35,14)
     mc.setBlocks(x+9,y+5,z-1,x+10,y+5,z-1,35,14)
@@ -45,7 +45,7 @@ def butterfly(x,y,z):
     mc.setBlocks(x+9,y+5,z+7,x+12,y+5,z+7, 35,3)
     mc.setBlock(x+12,y+5,z-7,35,3)
     mc.setBlock(x+12,y+5,z+8,35,3)
-    
+
 #house with 2 stained-glass window
 def stainGlassHouse(x,y,z):
     #коробка из кирпича
@@ -60,7 +60,7 @@ def stainGlassHouse(x,y,z):
     #сделаем витраж
     mc.setBlocks(x-3,y+4,z+5,x+3,y+10,z+5,95,5)
     mc.setBlocks(x+3,y+4,z-5,x-3,y+10,z-5,95,5)
-    
+
 #house with 7 windows, door, roof
 def fourWindowsHouse(x,y,z):
     #пол
@@ -255,7 +255,7 @@ def setRocket(x,y,z):
 
 #different kind of ships by #vikings team
 def LODKA(x,y,z):
-#каркас    
+#каркас
     mc.setBlocks(x-5,y-2,z,x+5,y-2,z,5,2)
     mc.setBlocks(x-5,y-1,z+1,x+5,y-1,z+1,5,2)
     mc.setBlocks(x-5,y-1,z-1,x+5,y-1,z-1,5,2)
@@ -681,7 +681,7 @@ def setPitch(x,y,z):
                 [c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c],
             ]
         ]
-    while True: 
+    while True:
         for pattern in fieldArray:
             y=pos.y
             z=pos.z
@@ -705,7 +705,7 @@ def setSkyscraper(x,y,z):
     f = 41
     g = 57
     h = (1,6)
-    bigArray = [                                 
+    bigArray = [
                     [
                          [c,c,c,c,c,c,c],
                          [d,d,d,d,d,d,d],
@@ -773,7 +773,7 @@ def setSkyscraper(x,y,z):
                          [h,h,h,h,h,h,h]
                     ],
                     [
-                         
+
                          [c,c,c,c,c,c,c],
                          [d,d,d,d,d,d,d],
                          [b,a,g,g,g,a,b],
@@ -873,7 +873,7 @@ def setSkyscraper(x,y,z):
                          [h,h,h,h,h,h,h]
                     ],
                     [
-                         
+
                          [c,c,c,c,c,c,c],
                          [d,d,d,d,d,d,d],
                          [b,a,a,a,a,a,b],
@@ -978,7 +978,7 @@ def setPicture(x,y,z):
                       [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
                       [q,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,q],
                       [q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q],
-           
+
                   ],
 [
                       [q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q],
@@ -996,8 +996,8 @@ def setPicture(x,y,z):
                       [q,a,c,a,a,a,a,a,a,a,a,a,a,c,a,a,c,a,a,q],
                       [q,w,c,w,w,w,e,e,e,e,e,e,w,c,s,s,c,s,s,q],
                       [q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q],
-           
-                  ], 
+
+                  ],
                   [
                       [r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r],
                       [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
@@ -1014,7 +1014,7 @@ def setPicture(x,y,z):
                       [q,a,a,a,a,a,a,a,a,a,a,a,c,a,a,c,a,a,a,q],
                       [q,w,w,w,w,w,e,e,e,e,e,e,w,w,w,w,w,w,w,q],
                       [q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q],
-                 ], 
+                 ],
 [
                       [q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q],
                       [q,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,q],
@@ -1082,7 +1082,7 @@ def setPicture(x,y,z):
                       [q,a,a,a,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,q],
                       [q,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,q],
                       [q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q],
-           
+
                 ]
       ]
   for letter in bigArray:
@@ -1097,7 +1097,7 @@ def setPicture(x,y,z):
           y-=1
 
 #trololo face
-def trololo(x,y,z):
+def trololo(coordDict):
     a=1
     c=(1,6)
     b=155
@@ -1139,16 +1139,17 @@ def trololo(x,y,z):
                [f,f,f,f,f,f,c,a,a,a,a,a,a,a,a,a,a,a],
            ]
     ]
-                  
+
     for letter in bigArray:
-       y=pos.y
-       z=pos.z
+       y=coordDict.x
+       z=coordDict.z
        for level in letter:
-           z=pos.z
+           z=coordDict.z
            for block in level:
                mc.setBlock(x+30, y, z-25, block)
                z+=1
            y-=1
+
 # the cannon
 def setCannon(x,y,z):
     b=(5,5)
@@ -1166,8 +1167,8 @@ def setCannon(x,y,z):
             [a,a,a,a,a,a,b,a,a,a,b,a,a,a],
             [a,a,a,a,a,b,b,a,a,a,b,b,a,a],
             [a,a,a,a,b,b,b,b,b,b,b,b,b,a]
-            
-                
+
+
             ],
         [
             [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
@@ -1180,8 +1181,8 @@ def setCannon(x,y,z):
             [a,a,a,a,a,a,b,a,a,a,b,a,a,a],
             [a,a,a,a,a,b,b,a,a,a,b,b,a,a],
             [a,a,a,a,b,b,b,b,b,b,b,b,b,a]
-            
-                
+
+
             ],
         [
             [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
@@ -1194,8 +1195,8 @@ def setCannon(x,y,z):
             [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
             [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
             [a,a,a,a,a,a,a,a,a,a,a,a,a,a]
-            
-                
+
+
             ],
         [
             [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
@@ -1208,8 +1209,8 @@ def setCannon(x,y,z):
             [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
             [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
             [a,a,a,a,a,a,a,a,a,a,a,a,a,a]
-            
-                
+
+
             ],
         [
             [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
@@ -1222,22 +1223,8 @@ def setCannon(x,y,z):
             [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
             [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
             [a,a,a,a,a,a,a,a,a,a,a,a,a,a]
-            
-                
-            ],
-        [
-            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
-            [c,a,a,c,c,c,c,a,a,a,c,c,a,a],
-            [a,c,c,a,a,a,a,a,a,a,a,a,c,a],
-            [a,a,a,a,a,a,a,a,a,a,a,a,a,c],
-            [a,a,a,a,a,a,a,a,a,a,a,a,a,c],
-            [a,c,c,a,a,a,a,a,a,a,a,a,c,a],
-            [c,a,a,c,c,c,c,a,a,a,c,c,a,a],
-            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
-            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
-            [a,a,a,a,a,a,a,a,a,a,a,a,a,a]
-            
-                
+
+
             ],
         [
             [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
@@ -1250,8 +1237,22 @@ def setCannon(x,y,z):
             [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
             [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
             [a,a,a,a,a,a,a,a,a,a,a,a,a,a]
-            
-                
+
+
+            ],
+        [
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [c,a,a,c,c,c,c,a,a,a,c,c,a,a],
+            [a,c,c,a,a,a,a,a,a,a,a,a,c,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,c],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,c],
+            [a,c,c,a,a,a,a,a,a,a,a,a,c,a],
+            [c,a,a,c,c,c,c,a,a,a,c,c,a,a],
+            [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
+            [a,a,a,a,a,a,a,a,a,a,a,a,a,a]
+
+
             ],
         [
             [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
@@ -1264,8 +1265,8 @@ def setCannon(x,y,z):
             [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
             [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
             [a,a,a,a,a,a,a,a,a,a,a,a,a,a]
-            
-                
+
+
             ],
         [
             [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
@@ -1278,8 +1279,8 @@ def setCannon(x,y,z):
             [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
             [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
             [a,a,a,a,a,a,a,a,a,a,a,a,a,a]
-            
-                
+
+
             ],
         [
             [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
@@ -1292,8 +1293,8 @@ def setCannon(x,y,z):
             [a,a,a,a,a,a,a,c,c,c,a,a,a,a],
             [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
             [a,a,a,a,a,a,a,a,a,a,a,a,a,a]
-            
-                
+
+
             ],
         [
             [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
@@ -1306,8 +1307,8 @@ def setCannon(x,y,z):
             [a,a,a,a,a,a,b,a,a,a,b,a,a,a],
             [a,a,a,a,a,b,b,a,a,a,b,b,a,a],
             [a,a,a,a,b,b,b,b,b,b,b,b,b,a]
-            
-                
+
+
             ],
         [
             [a,a,a,a,a,a,a,a,a,a,a,a,a,a],
@@ -1320,8 +1321,8 @@ def setCannon(x,y,z):
             [a,a,a,a,a,a,b,a,a,a,b,a,a,a],
             [a,a,a,a,a,b,b,a,a,a,b,b,a,a],
             [a,a,a,a,b,b,b,b,b,b,b,b,b,a]
-            
-                
+
+
             ]
         ]
     for letter in bigarray:
