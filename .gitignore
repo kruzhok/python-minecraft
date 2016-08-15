@@ -8,3 +8,7 @@ tox.ini
 setup.py
 tests
 .DS_Store
+Equalaizer.py
+Equal.py
+.travis.yml
+.coveragerc
