@@ -1,0 +1,9 @@
+LICENSE.txt
+__pycache__
+mcpi
+requirements-test.txt
+README.rst
+mcpi_protocol_spec.txt
+tox.ini
+setup.py
+tests
