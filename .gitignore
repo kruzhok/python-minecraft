@@ -7,3 +7,4 @@ mcpi_protocol_spec.txt
 tox.ini
 setup.py
 tests
+.DS_Store
