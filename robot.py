@@ -1,9 +1,13 @@
 from mcpi.minecraft import Minecraft
 mc=Minecraft.create()
 import time
+<<<<<<< HEAD
 name = input('Enter your name: ')
 ID = mc.getPlayerEntityId(name)
 pos = mc.entity.getTilePos(ID)
+=======
+pos = mc.player.getTilePos()
+>>>>>>> 60e7fa3109566d773596606dcb5500aa4ae67298
 x,y,z = pos.x,pos.y,pos.z
 u = 35,14#head-up
 h = 35#head-down

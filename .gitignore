@@ -1,0 +1,13 @@
+LICENSE.txt
+__pycache__
+requirements-test.txt
+README.rst
+mcpi_protocol_spec.txt
+tox.ini
+setup.py
+tests
+.DS_Store
+Equalaizer.py
+Equal.py
+.travis.yml
+.coveragerc

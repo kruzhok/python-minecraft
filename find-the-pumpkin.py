@@ -5,9 +5,13 @@ from mcpi.minecraft import Minecraft
 mc = Minecraft.create()
 import random
 import time
+<<<<<<< HEAD
 name = input('Who will play?')
 ID = mc.getPlayerEntityId(name)
 pos = mc.entity.getTilePos(ID)
+=======
+pos = mc.player.getTilePos()
+>>>>>>> 60e7fa3109566d773596606dcb5500aa4ae67298
 x,y,z = pos.x,pos.y,pos.z
 aw = int(input("How many blocks?-->"))#количество блоков - сложность игры
 qwerty = int(input("How many seconds?-->"))
@@ -51,4 +55,8 @@ while True:
            time.sleep(1)
            mc.setBlocks(x-aw+1,y+1+lavaLayer,z-aw+1,x+aw-1,y+1+lavaLayer,z+aw-1,11)
            lavaLayer+=1
+<<<<<<< HEAD
        break
+=======
+       break
+>>>>>>> 60e7fa3109566d773596606dcb5500aa4ae67298

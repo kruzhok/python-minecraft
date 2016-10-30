@@ -1097,7 +1097,11 @@ def setPicture(x,y,z):
           y-=1
 
 #trololo face
+<<<<<<< HEAD
 def trololo(pos,x,y,z):
+=======
+def trololo(coordDict):
+>>>>>>> 60e7fa3109566d773596606dcb5500aa4ae67298
     a=1
     c=(1,6)
     b=155
@@ -1141,10 +1145,17 @@ def trololo(pos,x,y,z):
     ]
 
     for letter in bigArray:
+<<<<<<< HEAD
        y=pos.x
        z=pos.z
        for level in letter:
            z=pos.z
+=======
+       y=coordDict.x
+       z=coordDict.z
+       for level in letter:
+           z=coordDict.z
+>>>>>>> 60e7fa3109566d773596606dcb5500aa4ae67298
            for block in level:
                mc.setBlock(x+30, y, z-25, block)
                z+=1
