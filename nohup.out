@@ -1,0 +1,8 @@
+  File "Equalaizer.py", line 16
+    column(s)
+            ^
+TabError: inconsistent use of tabs and spaces in indentation
+  File "Equalaizer.py", line 16
+    column(s)
+            ^
+TabError: inconsistent use of tabs and spaces in indentation
