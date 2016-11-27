@@ -1,16 +1,5 @@
-from mcpi.minecraft import Minecraft
-import time
-import random
-ImageName = input("Image name:")
-verticalOrHorisontal = input("for vertical image type \"vertical\". For horizontal any other input: ")
-if verticalOrHorisontal=="vertical":
-    print("You choosed vertical image. Type coordinates for left bottom edge")
-else:
-    print("You choosed vertical image. Type coordinates for left top edge")
-X0 = int(input("X0:"))
-Y0 = int(input("Y0:"))
-Z0 = int(input("Z0:"))
-def Image(ImageName,X0,Y0,Z0,verticalOrHorisontal):
+from mcpi.minecraft import Minecraft    
+def Image(ImageName,X0,Y0,Z0,basewidth,horisontal):
     from PIL import Image
     import math
     mc = Minecraft.create()
@@ -31,22 +20,21 @@ def Image(ImageName,X0,Y0,Z0,verticalOrHorisontal):
     red = [150,52,48,14]#rgb, id
     black = [25,22,22,15]#rgb, id
     colors = [white,orange,magneta,lightBlue,yellow,lime,pink,gray,lightGray,cyan,purple,blue,brown,green,red,black]
-    #enter your data here:
-    img = Image.open(ImageName)#image
+    img = Image.open(ImageName)
+    wpercent = (basewidth/float(img.size[0]))
+    hsize = int((float(img.size[1])*float(wpercent)))
+    img = img.resize((basewidth,hsize), Image.ANTIALIAS)
     #place
-    if img.width*img.height > 500*500:
-        mc.postToChat("the Image is too big!")
+    if img.width*img.height > 750*750:
+        mc.postToChat("wanted Image is too big!")
     else:
         data = img.load()
         x = 0
         while x < img.width:
             y = 0
-            while y < img.height and y >= 0:
+            while y < img.height:
                 res = 255*3
-                if verticalOrHorisontal=="vertical":
-                    pixel = data[x,img.height-1-y]
-                else:
-                    pixel = data[x,y]
+                pixel = data[x,y]
                 for color in colors:
                     r = pixel[0]-color[0]
                     g = pixel[1]-color[1]
@@ -54,12 +42,28 @@ def Image(ImageName,X0,Y0,Z0,verticalOrHorisontal):
                     if math.fabs(r)+math.fabs(g)+math.fabs(b) < res:
                         res = math.fabs(r)+math.fabs(g)+math.fabs(b)
                         block = 35,color[3]
-                if verticalOrHorisontal=="vertical":
-                    mc.setBlock(X0+x,Y0+y,Z0,block)
-                else:
+                if horisontal:
                     mc.setBlock(X0+x,Y0,Z0+y,block)
+                else:
+                    mc.setBlock(X0+x,Y0-y,Z0,block)
                 y = y + 1
             mc.postToChat(str(int(x / img.width * 100))+"%")
             x = x + 1
         mc.postToChat("done.")
-Image(ImageName,X0,Y0,Z0,verticalOrHorisontal)
+
+password = input("enter password: ")
+if password == "codestuding":
+    ImageName = input("enter image name: ")
+    horisontalAnswer = input("for horizontal image type 'true', for vertical image type any other: ")
+    if horisontalAnswer == "true":
+        horisontal = True
+    else:
+        horisontal = False
+    print("enter coordinates for left top edge")
+    X0 = int(input("X coordinate: "))
+    Y0 = int(input("Y coordinate: "))
+    Z0 = int(input("Z coordinate: "))
+    basewidth = int(input("enter wanted image width (height will be calculated automaticly): "))
+    Image(ImageName,X0,Y0,Z0,basewidth,horisontal)
+else:
+    print("permission denied!")

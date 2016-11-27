@@ -1,0 +1,171 @@
+from mcpi.minecraft import Minecraft
+from time import sleep
+mc = Minecraft.create()
+x,y,z = 377,125,158
+b=35,15
+c=35,14
+g=160
+w=35,9
+s=35,5
+f=51
+a=0
+n=166
+bigList = [
+                [
+                    [b,b,b,b,b,b,b,b,b,b,b,b,b,b],
+                    [b,b,b,b,b,b,c,c,b,b,b,b,b,b],
+                    [b,b,b,b,b,c,c,c,c,b,b,b,b,b],
+                    [b,b,b,b,c,c,c,c,c,c,b,b,b,b],
+                    [b,b,b,b,c,s,g,g,s,c,b,b,b,b],
+                    [b,b,b,b,b,s,g,g,s,b,b,b,b,b],
+                    [b,b,b,b,w,s,s,s,s,w,b,b,b,b],
+                    [b,b,b,w,w,s,s,s,s,w,w,b,b,b],
+                    [b,b,w,w,w,s,s,s,s,w,w,w,b,b],
+                    [a,a,n,n,n,a,a,a,a,n,n,n,a,a],
+                ],
+                [
+                    [b,b,b,b,b,b,c,c,b,b,b,b,b,b],
+                    [b,b,b,b,b,c,c,c,c,b,b,b,b,b],
+                    [b,b,b,b,c,c,c,c,c,c,b,b,b,b],
+                    [b,b,b,b,c,s,g,g,s,c,b,b,b,b],
+                    [b,b,b,b,b,s,g,g,s,b,b,b,b,b],
+                    [b,b,b,b,w,s,s,s,s,w,b,b,b,b],
+                    [b,b,b,w,w,s,s,s,s,w,w,b,b,b],
+                    [b,b,w,w,w,s,s,s,s,w,w,w,b,b],
+                    [b,b,f,f,f,b,b,b,b,f,f,f,b,b],
+                    [a,a,n,n,n,a,a,a,a,n,n,n,a,a],
+                ],
+                [
+                    [b,b,b,b,b,c,c,c,c,b,b,b,b,b],
+                    [b,b,b,b,c,c,c,c,c,c,b,b,b,b],
+                    [b,b,b,b,c,s,g,g,s,c,b,b,b,b],
+                    [b,b,b,b,b,s,g,g,s,b,b,b,b,b],
+                    [b,b,b,b,w,s,s,s,s,w,b,b,b,b],
+                    [b,b,b,w,w,s,s,s,s,w,w,b,b,b],
+                    [b,b,w,w,w,s,s,s,s,w,w,w,b,b],
+                    [b,b,f,f,f,b,b,b,b,f,f,f,b,b],
+                    [b,b,f,f,f,b,b,b,b,f,f,f,b,b],
+                    [a,a,n,n,n,a,a,a,a,n,n,n,a,a],
+                ],
+                [
+                    [b,b,b,b,c,c,c,c,c,c,b,b,b,b],
+                    [b,b,b,b,c,s,g,g,s,c,b,b,b,b],
+                    [b,b,b,b,b,s,g,g,s,b,b,b,b,b],
+                    [b,b,b,b,w,s,s,s,s,w,b,b,b,b],
+                    [b,b,b,w,w,s,s,s,s,w,w,b,b,b],
+                    [b,b,w,w,w,s,s,s,s,w,w,w,b,b],
+                    [b,b,f,f,f,b,b,b,b,f,f,f,b,b],
+                    [b,b,f,f,f,b,b,b,b,f,f,f,b,b],
+                    [b,b,f,f,f,b,b,b,b,f,f,f,b,b],
+                    [a,a,n,n,n,a,a,a,a,n,n,n,a,a],
+                ],
+                [
+                    [b,b,b,b,c,s,g,g,s,c,b,b,b,b],
+                    [b,b,b,b,b,s,g,g,s,b,b,b,b,b],
+                    [b,b,b,b,w,s,s,s,s,w,b,b,b,b],
+                    [b,b,b,w,w,s,s,s,s,w,w,b,b,b],
+                    [b,b,w,w,w,s,s,s,s,w,w,w,b,b],
+                    [b,b,f,f,f,b,b,b,b,f,f,f,b,b],
+                    [b,b,f,f,f,b,b,b,b,f,f,f,b,b],
+                    [b,b,f,f,f,b,b,b,b,f,f,f,b,b],
+                    [b,b,f,f,f,b,b,b,b,f,f,f,b,b],
+                    [a,a,n,n,n,a,a,a,a,n,n,n,a,a],
+                ],
+                [
+                    [b,b,b,b,c,s,g,g,s,c,b,b,b,b],
+                    [b,b,b,b,b,s,g,g,s,b,b,b,b,b],
+                    [b,b,b,b,w,s,s,s,s,w,b,b,b,b],
+                    [b,b,b,w,w,s,s,s,s,w,w,b,b,b],
+                    [b,b,w,w,w,s,s,s,s,w,w,w,b,b],
+                    [b,b,f,f,f,b,b,b,b,f,f,f,b,b],
+                    [b,b,f,f,f,b,b,b,b,f,f,f,b,b],
+                    [b,b,f,f,f,b,b,b,b,f,f,f,b,b],
+                    [b,b,f,f,f,b,b,b,b,f,f,f,b,b],
+                    [b,b,f,f,f,b,b,b,b,f,f,f,b,b],
+                    [a,a,n,n,n,a,a,a,a,n,n,n,a,a],
+                ],
+                [
+                    [b,b,b,b,b,b,b,b,b,b,b,b,b,b],
+                    [b,b,b,b,b,b,b,b,b,b,b,b,b,b],
+                    [b,b,b,b,b,b,b,b,b,b,b,b,b,b],
+                    [b,b,b,b,c,c,b,b,b,b,b,b,b,b],
+                    [s,s,s,s,s,c,c,b,b,b,b,b,b,b],
+                    [s,s,s,g,g,c,c,c,b,b,b,b,b,b],
+                    [s,s,s,g,g,c,c,c,b,b,b,b,b,b],
+                    [s,s,s,s,s,c,c,b,b,b,b,b,b,b],
+                    [b,b,b,b,c,c,b,b,b,b,b,b,b,b],
+                    [b,b,b,b,b,b,b,b,b,b,b,b,b,b],
+                    [b,b,b,b,b,b,b,b,b,b,b,b,b,b],
+                ],
+                [
+                    [b,b,b,b,c,s,g,g,s,c,b,b,b,b],
+                    [b,b,b,b,b,s,g,g,s,b,b,b,b,b],
+                    [b,b,b,b,w,s,s,s,s,w,b,b,b,b],
+                    [b,b,b,w,w,s,s,s,s,w,w,b,b,b],
+                    [b,b,w,w,w,s,s,s,s,w,w,w,b,b],
+                    [b,b,f,f,f,b,b,b,b,f,f,f,b,b],
+                    [b,b,f,f,f,b,b,b,b,f,f,f,b,b],
+                    [b,b,f,f,f,b,b,b,b,f,f,f,b,b],
+                    [b,b,f,f,f,b,b,b,b,f,f,f,b,b],
+                    [b,b,f,f,f,b,b,b,b,f,f,f,b,b],
+                    [a,a,n,n,n,a,a,a,a,n,n,n,a,a],
+                ],
+                [
+                    [b,b,b,b,b,c,c,c,c,b,b,b,b,b],
+                    [b,b,b,b,c,c,c,c,c,c,b,b,b,b],
+                    [b,b,b,b,c,s,g,g,s,c,b,b,b,b],
+                    [b,b,b,b,b,s,g,g,s,b,b,b,b,b],
+                    [b,b,b,b,w,s,s,s,s,w,b,b,b,b],
+                    [b,b,b,w,w,s,s,s,s,w,w,b,b,b],
+                    [b,b,w,w,w,s,s,s,s,w,w,w,b,b],
+                    [b,b,f,f,f,b,b,b,b,f,f,f,b,b],
+                    [b,b,f,f,f,b,b,b,b,f,f,f,b,b],
+                    [a,a,n,n,n,a,a,a,a,n,n,n,a,a],
+                ],
+                [
+                    [b,b,b,b,b,c,c,c,c,b,b,b,b,b],
+                    [b,b,b,b,c,c,c,c,c,c,b,b,b,b],
+                    [b,b,b,b,c,s,g,g,s,c,b,b,b,b],
+                    [b,b,b,b,b,s,g,g,s,b,b,b,b,b],
+                    [b,b,b,b,w,s,s,s,s,w,b,b,b,b],
+                    [b,b,b,w,w,s,s,s,s,w,w,b,b,b],
+                    [b,b,w,w,w,s,s,s,s,w,w,w,b,b],
+                    [b,b,f,f,f,b,b,b,b,f,f,f,b,b],
+                    [b,b,f,f,f,b,b,b,b,f,f,f,b,b],
+                    [a,a,n,n,n,a,a,a,a,n,n,n,a,a],
+                ],
+                [
+                    [b,b,b,b,b,b,c,c,b,b,b,b,b,b],
+                    [b,b,b,b,b,c,c,c,c,b,b,b,b,b],
+                    [b,b,b,b,c,c,c,c,c,c,b,b,b,b],
+                    [b,b,b,b,c,s,g,g,s,c,b,b,b,b],
+                    [b,b,b,b,b,s,g,g,s,b,b,b,b,b],
+                    [b,b,b,b,w,s,s,s,s,w,b,b,b,b],
+                    [b,b,b,w,w,s,s,s,s,w,w,b,b,b],
+                    [b,b,w,w,w,s,s,s,s,w,w,w,b,b],
+                    [b,b,f,f,f,b,b,b,b,f,f,f,b,b],
+                    [a,a,n,n,n,a,a,a,a,n,n,n,a,a],
+                ],
+                [
+                    [b,b,b,b,b,b,b,b,b,b,b,b,b,b],
+                    [b,b,b,b,b,b,c,c,b,b,b,b,b,b],
+                    [b,b,b,b,b,c,c,c,c,b,b,b,b,b],
+                    [b,b,b,b,c,c,c,c,c,c,b,b,b,b],
+                    [b,b,b,b,c,s,g,g,s,c,b,b,b,b],
+                    [b,b,b,b,b,s,g,g,s,b,b,b,b,b],
+                    [b,b,b,b,w,s,s,s,s,w,b,b,b,b],
+                    [b,b,b,w,w,s,s,s,s,w,w,b,b,b],
+                    [b,b,w,w,w,s,s,s,s,w,w,w,b,b],
+                    [a,a,n,n,n,a,a,a,a,n,n,n,a,a],
+                ]
+         ]
+while True:
+    for letter in bigList:
+        for line in letter:
+            for block in line:
+                mc.setBlock(x-14,y+10,z+3,block)
+                x+=1
+            x=377
+            y-=1
+        y=125
+        sleep(1)
