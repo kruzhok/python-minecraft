@@ -2,8 +2,7 @@
 Library of Python functions for Minecraft which is made during Moscow Coding School Course
 
 <br> <br>
-This is the repository of Minecraft Course in Moscow Coding School <br>
-www: http://moscoding.ru/minecraft/
+This is the repository of Minecraft Course<br>
 
 To launch this code you need to download and install: <br>
 
